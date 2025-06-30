@@ -1,0 +1,27 @@
+@import "../../../../styles/variables.scss";
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  &__nav {
+    display: flex;
+    gap: 32px;
+    margin: 27px 60px 0 0;
+  }
+  &__link {
+    font-family: $font-primary;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:visited,
+    &:active {
+      text-decoration: none;
+    }
+    &.activated {
+      color: $primary-color;
+    }
+  }
+}
