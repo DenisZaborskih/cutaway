@@ -1,0 +1,48 @@
+<div class="modal-background" (click)="closeModal()">
+  <div class="modal-base" (click)="$event.stopPropagation()">
+    <p class="modal-contact">Используйте удобные способы связи!</p>
+    <div class="modal__logos">
+      <a
+        href="https://vk.com/wstd_life"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          class="modal__logos_logo"
+          src="assets/icons/vk.svg"
+          alt="Вконтакте"
+        />
+      </a>
+      <a
+        href="https://wa.me/79538250101"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          class="modal__logos_logo"
+          src="assets/icons/whatsapp.svg"
+          alt="WhatsApp"
+        />
+      </a>
+      <a
+        href="https://t.me/denis_DbIH9I"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          class="modal__logos_logo"
+          src="assets/icons/telegram.svg"
+          alt="Telegram"
+        />
+      </a>
+      <a href="mailto:deniszaborskih04@gmail.com">
+        <img
+          class="modal__logos_logo"
+          src="assets/icons/mail.svg"
+          alt="GMail"
+        />
+      </a>
+    </div>
+    <button class="modal-close" (click)="closeModal()">Закрыть</button>
+  </div>
+</div>
