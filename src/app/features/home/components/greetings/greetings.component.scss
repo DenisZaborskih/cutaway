@@ -1,0 +1,56 @@
+@import "../../../../../styles/variables.scss";
+
+.greetings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 140px;
+  margin-bottom: 71px;
+  &__main-area {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    margin-left: 148px;
+    width: 506px;
+  }
+  &_title {
+    font-size: 44px;
+    font-weight: 700;
+    margin: 0;
+  }
+  &_text {
+    font-size: 16px;
+    margin: 0;
+  }
+  &_download-button {
+    color: #ffffff;
+    font-weight: 500;
+    background-color: $primary-color;
+    border: solid 2px $primary-color;
+    border-radius: 2px;
+    font-size: 20px;
+    width: max-content;
+    height: max-content;
+    padding: 10px 20px 10px 20px;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    &:hover {
+      background-color: $additional-bg-color;
+      border: solid 2px $primary-color;
+      box-sizing: border-box;
+      border-radius: 2px;
+      color: $dark-color;
+    }
+  }
+  &__image-container {
+    margin-right: 148px;
+    &_image {
+      display: block;
+      object-fit: cover;
+      width: 243px;
+      height: 243px;
+      border-radius: 50%;
+      box-shadow: -10px 10px #edf7fa;
+    }
+  }
+}

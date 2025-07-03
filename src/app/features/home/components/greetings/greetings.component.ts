@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './greetings.component.scss'
 })
 export class GreetingsComponent {
-
+  downloadResumeModal(){
+    
+  }
 }
