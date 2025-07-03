@@ -1,1 +1,27 @@
-<p>header works!</p>
+<header class="header">
+  <nav class="header__nav">
+    <a
+      class="header__link"
+      [routerLink]="['/home']"
+      routerLinkActive="activated"
+    >
+      Домашняя страница
+    </a>
+    <a
+      class="header__link"
+      [routerLink]="['/blog']"
+      routerLinkActive="activated"
+    >
+      Блог
+    </a>
+    <a
+      class="header__link"
+      [routerLink]="['/work']"
+      routerLinkActive="activated"
+    >
+      Проекты
+    </a>
+    <a class="header__link" (click)="openModalContacts()"> Контакты </a>
+  </nav>
+</header>
+<ng-template #modalContainer></ng-template>
