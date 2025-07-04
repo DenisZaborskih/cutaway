@@ -1,0 +1,68 @@
+@import "../../../../../styles/variables.scss";
+
+.posts {
+  background-color: $additional-bg-color;
+  padding: 7px 148px 32px 148px;
+  &__warning{
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0 auto;
+  }
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  &__card {
+    color: $dark-color;
+    background-color: $default-bg-color;
+    flex: 1;
+    border-radius: 4px;
+    padding: 24px 27px 7px 24px;
+    max-width: 45%;
+    max-height: 495px;
+    &_title {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0;
+      margin-bottom: 17px;
+    }
+    &_date,
+    &_theme {
+      font-size: 18px;
+      font-weight: 400;
+    }
+    &_line {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+    &_text {
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 25px;
+    }
+  }
+  &_title {
+    color: $dark-color;
+    font-size: 22px;
+    line-height: 60px;
+    font-weight: 400;
+    margin: 0;
+  }
+  &_link {
+    text-decoration: none;
+    color: $secondary-color;
+    font-size: 16px;
+    transition: 0.3s ease-in;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
