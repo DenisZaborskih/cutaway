@@ -10,7 +10,7 @@ export const appConfig: ApplicationConfig = {
     InMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
       apiBase: 'api/',
-      delay: 500
+      delay: 200
     })
   )
   ]

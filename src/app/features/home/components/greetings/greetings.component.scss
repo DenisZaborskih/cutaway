@@ -35,7 +35,7 @@
     transition: 0.3s ease-in;
     cursor: pointer;
     &:hover {
-      background-color: $additional-bg-color;
+      background-color: $default-bg-color;
       border: solid 2px $primary-color;
       box-sizing: border-box;
       border-radius: 2px;
