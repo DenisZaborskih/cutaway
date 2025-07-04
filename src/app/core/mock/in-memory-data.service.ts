@@ -1,0 +1,29 @@
+import { Injectable } from '@angular/core';
+import { Posts } from '../interfaces/posts';
+import { InMemoryDbService } from 'angular-in-memory-web-api';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class InMemoryDataService implements InMemoryDbService {
+  createDb() {
+    const posts: Posts[] = [
+      { title: 'Опытный в форматировании даты и времени', date: new Date('2025-06-13'), theme: 'программирование', text: 'Опытный в форматировании даты и времени для веб-приложений с использованием JavaScript, Angular и Laravel.' },
+      { title: 'Разработка сайтов с акцентом на планирование', date: new Date('2025-06-22'), theme: 'проекты', text: 'Разрабатывает сайты, включая сайты-визитки, с акцентом на эффективное планирование проектов.' },
+      { title: 'Первый пост', date: new Date('2025-07-01'), theme: 'Angular', text: 'Текст первого поста' },
+      { title: 'Второй пост', date: new Date('2025-07-02'), theme: null, text: 'Текст второго поста' },
+      { title: 'Советы по оптимизации производительности', date: new Date('2025-05-15'), theme: 'программирование', text: 'Как улучшить производительность Angular-приложений.' },
+      { title: 'Обзор новых возможностей TypeScript', date: new Date('2025-04-10'), theme: 'typescript', text: 'Рассмотрение новых функций в последней версии TypeScript.' },
+      { title: 'Введение в RxJS', date: new Date('2025-03-05'), theme: 'rxjs', text: 'Основы реактивного программирования с использованием RxJS.' },
+      { title: 'Лучшие практики CSS', date: new Date('2025-02-20'), theme: 'css', text: 'Советы по написанию чистого и поддерживаемого CSS.' },
+      { title: 'Работа с REST API в Angular', date: new Date('2025-01-30'), theme: 'angular', text: 'Как эффективно работать с REST API в Angular-приложениях.' },
+      { title: 'Тестирование Angular-приложений', date: new Date('2024-12-15'), theme: 'testing', text: 'Обзор инструментов и подходов к тестированию в Angular.' },
+      { title: 'Управление состоянием с NgRx', date: new Date('2024-11-10'), theme: 'ngrx', text: 'Как использовать NgRx для управления состоянием приложения.' },
+      { title: 'Создание адаптивного дизайна', date: new Date('2024-10-05'), theme: 'design', text: 'Основы адаптивной верстки и медиазапросов.' },
+      { title: 'Введение в Web Accessibility', date: new Date('2024-09-01'), theme: 'accessibility', text: 'Как сделать веб-приложения доступными для всех пользователей.' },
+      { title: 'Оптимизация загрузки изображений', date: new Date('2024-08-20'), theme: 'performance', text: 'Методы оптимизации изображений для ускорения загрузки страниц.' },
+      { title: 'Использование Angular CLI', date: new Date('2024-07-15'), theme: 'tools', text: 'Обзор возможностей Angular CLI для разработки.' }
+    ];
+    return { posts };
+  }
+}
