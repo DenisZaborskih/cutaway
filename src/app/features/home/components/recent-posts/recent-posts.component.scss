@@ -3,6 +3,11 @@
 .posts {
   background-color: $additional-bg-color;
   padding: 7px 148px 32px 148px;
+  &__warning{
+    font-weight: 700;
+    font-size: 32px;
+    margin: 0 auto;
+  }
   &__header {
     display: flex;
     flex-direction: row;
@@ -42,8 +47,6 @@
       font-size: 16px;
       font-weight: 400;
       margin-top: 25px;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
   }
   &_title {

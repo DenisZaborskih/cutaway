@@ -4,7 +4,7 @@
     <a
       class="posts_link"
       [routerLink]="['/blog']"
-      routerLinkActive="router-link-active"
+      aria-label="Перейти ко всем постам"
     >
       Посмотреть все
     </a>
@@ -22,6 +22,9 @@
         </ng-container>
         <p class="posts__card_text">{{ post.text }}</p>
       </div>
+    </ng-container>
+    <ng-container *ngIf="recentPosts.length === 0">
+      <p class="posts__warning">Ой! Кажется постов ещё нет!</p>
     </ng-container>
   </div>
 </div>

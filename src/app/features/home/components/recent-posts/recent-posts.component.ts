@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './recent-posts.component.scss'
 })
 export class RecentPostsComponent {
-  public recentPosts!: Posts[];
+  public recentPosts: Posts[] = [];
 
   constructor(
     private postsService: PostsService
@@ -20,13 +20,13 @@ export class RecentPostsComponent {
 
   ngOnInit(): void {
     this.postsService.getPosts().subscribe((res) => {
-      this.recentPosts = res.sort(function (a, b) {
+      this.recentPosts = res.sort((a, b) => {
         return new Date(b.date).getTime() - new Date(a.date).getTime();
       }).slice(0, 2);
       this.recentPosts.forEach(element => {
         if (element.text.length > 220) {
           let splittedText = element.text.split(' ');
-          while (splittedText.toString().length > 220) {
+          while (splittedText.join(' ').length > 220) {
             splittedText = splittedText.slice(0, splittedText.length - 1);
           }
           element.text = splittedText.join(' ') + '...';
