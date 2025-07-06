@@ -9,7 +9,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [RouterLink, CommonModule],
   templateUrl: './recent-posts.component.html',
-  styleUrl: './recent-posts.component.scss'
+  styleUrls: [
+    './recent-posts.component.scss',
+    '../../styles/common.scss']
 })
 export class RecentPostsComponent {
   public recentPosts: Posts[] = [];

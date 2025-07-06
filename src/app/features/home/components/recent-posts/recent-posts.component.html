@@ -1,8 +1,8 @@
-<div class="posts">
-  <div class="posts__header">
-    <h3 class="posts_title">Недавние посты</h3>
+<div class="home-block posts">
+  <div class="home-block__header posts__header">
+    <h3 class="home-block__header_title posts_title">Недавние посты</h3>
     <a
-      class="posts_link"
+      class="home-block__header_link posts_link"
       [routerLink]="['/blog']"
       aria-label="Перейти ко всем постам"
     >
@@ -24,7 +24,9 @@
       </div>
     </ng-container>
     <ng-container *ngIf="recentPosts.length === 0">
-      <p class="posts__warning">Ой! Кажется постов ещё нет!</p>
+      <p class="home-block__warning posts__warning">
+        Ой! Кажется постов ещё нет!
+      </p>
     </ng-container>
   </div>
 </div>
