@@ -1,0 +1,59 @@
+@import "../../../../../styles/variables.scss";
+
+.works {
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__project {
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 1px $gray-5-color;
+    padding: 31px 0 15px 0;
+    gap: 18px;
+    &_image {
+      width: 246px;
+      height: 180px;
+      object-fit: contain;
+      display: block;
+      flex-shrink: 0;
+      background-color: $additional-bg-color;
+      border-radius: 6px;
+      margin: 0;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &_title {
+      font-size: 30px;
+      font-weight: 700;
+      padding: 0;
+      margin: 0;
+    }
+    &_description{
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+    }
+    &_theme{
+        font-size: 20px;
+        font-weight: 400;
+        color: $light-color;
+        text-transform: capitalize;
+    }
+    &_year{
+        color: #fff;
+        background-color: $dark-blue;
+        padding: 2px 10px;
+        border-radius: 16px;
+        font-weight: 700;
+    }
+  }
+  &__year-theme{
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+  }
+}

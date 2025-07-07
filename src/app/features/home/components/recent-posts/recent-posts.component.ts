@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Posts } from '../../../../core/interfaces/posts';
+import { Posts } from '../../../../core/interfaces/posts.interface';
 import { PostsService } from '../../services/posts.service';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -9,7 +9,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [RouterLink, CommonModule],
   templateUrl: './recent-posts.component.html',
-  styleUrl: './recent-posts.component.scss'
+  styleUrls: [
+    './recent-posts.component.scss',
+    '../../styles/common.scss']
 })
 export class RecentPostsComponent {
   public recentPosts: Posts[] = [];
@@ -23,15 +25,6 @@ export class RecentPostsComponent {
       this.recentPosts = res.sort((a, b) => {
         return new Date(b.date).getTime() - new Date(a.date).getTime();
       }).slice(0, 2);
-      this.recentPosts.forEach(element => {
-        if (element.text.length > 220) {
-          let splittedText = element.text.split(' ');
-          while (splittedText.join(' ').length > 220) {
-            splittedText = splittedText.slice(0, splittedText.length - 1);
-          }
-          element.text = splittedText.join(' ') + '...';
-        }
-      });
     });
   }
 }

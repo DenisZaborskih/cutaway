@@ -1,1 +1,34 @@
-<p>featured-works works!</p>
+<div class="home-block works">
+  <header class="home-block__header works__header">
+    <h3 class="home-block__header_title works__header_title">
+      Разработанные проекты
+    </h3>
+    <a
+      class="home-block__header_link works__header_link"
+      [routerLink]="['/work']"
+      aria-label="Перейти к проектам"
+      >Посмотреть все</a
+    >
+  </header>
+  <div class="works__content">
+    <ng-container *ngFor="let project of worksShort">
+      <div class="works__project">
+        <img
+          src="{{ project.imgURL }}"
+          alt="Картника к проекту {{ project.theme }}"
+          class="works__project_image"
+        />
+        <div class="works__info">
+          <h4 class="works__info_title">
+            {{ project.title }}
+          </h4>
+          <div class="works__year-theme">
+            <span class="works__info_year">{{ project.year }}</span>
+            <span class="works__info_theme">{{ project.theme.toLocaleLowerCase() }}</span>
+          </div>
+          <p class="works__info_description">{{ project.description }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
