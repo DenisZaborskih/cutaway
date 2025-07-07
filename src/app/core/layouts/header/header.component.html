@@ -1,4 +1,5 @@
-<header class="header">
+<header class="header"
+  [class.active]="isActiveForMobile">
   <nav class="header__nav">
     <a
       class="header__link"
@@ -24,4 +25,5 @@
     <a class="header__link" (click)="openModalContacts()"> Контакты </a>
   </nav>
 </header>
+<button class="header__navigation-button" (click)="activateHeader()">&#9776;</button>
 <ng-template #modalContainer></ng-template>

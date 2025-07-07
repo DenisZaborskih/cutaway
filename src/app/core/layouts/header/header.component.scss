@@ -3,6 +3,9 @@
 .header {
   display: flex;
   justify-content: flex-end;
+  &__navigation-button{
+    display: none;
+  }
   &__nav {
     display: flex;
     gap: 32px;
@@ -22,6 +25,32 @@
     }
     &.activated {
       color: $primary-color;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .header{
+    display: none;
+    &.active{
+      display: block;
+    }
+    &__nav{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 12px;
+      align-items: flex-end;
+      margin: 0 18px;
+      padding: 6px;
+    }
+    &__navigation-button{
+      display: block;
+      margin-right: 18px;
+      margin-left: auto;
+      background-color: transparent;
+      border: none;
+      color: $dark-color;
     }
   }
 }

@@ -12,6 +12,7 @@ import { ContactsModalComponent } from '../../modals/contacts-modal/contacts-mod
 export class HeaderComponent {
   @ViewChild('modalContainer', { read: ViewContainerRef, static: true }) container!: ViewContainerRef;
 
+  public isActiveForMobile = false;
 
   openModalContacts() {
     this.container.clear();
@@ -20,6 +21,10 @@ export class HeaderComponent {
     componentRef.instance.closed.subscribe(() => {
       this.container.clear();
     });
+  }
+
+  activateHeader(){
+    this.isActiveForMobile = !this.isActiveForMobile;
   }
 
 }
